@@ -1,0 +1,68 @@
+diff --git a/application/config/constants.php b/application/config/constants.php
+index ddb9ee7f0..e386bb491 100644
+--- a/application/config/constants.php
++++ b/application/config/constants.php
+@@ -93,5 +93,5 @@ defined('EXIT__AUTO_MAX')      OR define('EXIT__AUTO_MAX', 125); // highest auto
+ */
+ define('NUMBER_OF_PEOPLE_CUSTOM_FIELDS',10);
+ define('APPLICATION_VERSION', '16.2');
+-define('ASSET_TIMESTAMP', '1531146242');
++define('ASSET_TIMESTAMP', '1531146242fffdfddfdfdsfddfdfdfdf2333333ff');
+ define('BUILD_TIMESTAMP', '1536688936');
+diff --git a/assets/css/invoice.css b/assets/css/invoice.css
+index 7a8a5a211..85109aef0 100644
+--- a/assets/css/invoice.css
++++ b/assets/css/invoice.css
+@@ -7,18 +7,23 @@
+ .invoice-con .invoice-content {
+   text-align: left;
+ }
++
++@page
++{
++	margin: .05in !important;
++}
+ @media print {
+-  @page {
+-    margin: 0;
+-    padding: 0;
+-  }
+   /* Main */
+   html {
+     overflow-x: visible !important;
++    margin:0 !important;
++    padding: 0 !important;
+   }
+   body {
+     overflow-x: visible !important;
+     overflow-y: visible !important;
++    margin:0 !important;
++    padding: 0 !important;
+   }
+   body .receipt_small * {
+     font-size: 9px !important;
+@@ -52,9 +57,9 @@
+     transition: none !important;
+   }
+   body #receipt_wrapper {
+-    width: 92%  !important;
++    width: 100%  !important;
+     font-size: 10px;
+-    margin: 7px auto auto auto !important;
++    margin: 7px 0 0 0 !important;
+     padding: 0 !important;
+   }
+   body #receipt_wrapper_inner {
+diff --git a/index.php b/index.php
+index 69df0ecc2..af9a16459 100644
+--- a/index.php
++++ b/index.php
+@@ -97,7 +97,7 @@ switch (ENVIRONMENT)
+  * 
+  *
+  */
+-	define('ASSET_MODE', isset($_SERVER['CI_ENV']) ? $_SERVER['CI_ENV'] : 'production');
++	define('ASSET_MODE', isset($_SERVER['CI_ENV']) ? $_SERVER['CI_ENV'] : 'development');
+ 
+ 	/*
+ 	 *---------------------------------------------------------------

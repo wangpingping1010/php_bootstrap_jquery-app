@@ -1,0 +1,14 @@
+17.2 Release!
+
+Whats new:
+* Can now upload images for kits
+* Added integration with platform.ly
+* Added option to change start of week to be Monday or Sunday
+* Can add customer on the fly from search box
+* Added Edit Sale and Edit Receiving Web Hooks
+* Added a popup on receiving to select quantities of all variations
+* Added quick link to easily complete a suspended transfer
+* Choose Quantity After Adding Item in Sales & Receivings can be set for each module
+* Added permission "Receive Store Account Payments" for sales + receivings
+* Added category filter to Sales --> Summary report
+* Using orginal file name when uploading file to woo commerce (SEO purposes)
